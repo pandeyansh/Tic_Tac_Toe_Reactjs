@@ -2,74 +2,56 @@
   text-align: center;
   margin-top: 20px;
 }
-/* Reset some default styles */
 body, h1, p {
   margin: 0;
   padding: 0;
 }
-
-/* Center the game on the page */
 .game {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f0f0f0;
+  background-color: rgb(62, 103, 110);
 }
-
-/* Style the game board */
 .game-board {
   border: 2px solid #333;
   border-radius: 6px;
-  background-color: white;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  background-color: rgb(70, 25, 71);
+  box-shadow: 0px 0px 10px rgba(36, 93, 139, 0.2);
 }
-
-/* Style the status message */
 .status {
   font-size: 20px;
   font-weight: bold;
   padding: 10px;
-  background-color: #333;
-  color: white;
+  background-color: #0b777a;
+  color: rgb(4, 13, 31);
 }
-
-/* Style the individual squares */
 .square {
   width: 60px;
   height: 60px;
   font-size: 24px;
   text-align: center;
   line-height: 60px;
-  background-color: #eee;
-  border: 1px solid #ccc;
+  background-color: #206e86;
+  border: 1px solid #0bd8b6;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
 }
-
-/* Highlight winning squares */
 .square.winner {
-  background-color: #f5b041;
+  background-color: #eba432;
 }
-
-/* Apply hover effect on squares */
 .square:hover {
-  background-color: #f0f0f0;
+  background-color: #6385ce;
 }
-
-/* Style the rows of squares */
 .board-row {
   display: flex;
 }
-
-/* Clear floating for the rows */
 .board-row:after {
   content: "";
   display: table;
   clear: both;
 }
-/* Highlight winning squares */
 .square.winner {
-  background-color: #f5b041;
-  color: white;
+  background-color: #e4a643;
+  color: rgb(22, 143, 143);
 }

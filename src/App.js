@@ -1,7 +1,5 @@
-//import logo from './logo.svg';
 import './App.css';
 import Game from './Game';
-
 function App() {
   return (
     <div className="game">
@@ -11,5 +9,4 @@ function App() {
   </div>
   );
 }
-
 export default App;

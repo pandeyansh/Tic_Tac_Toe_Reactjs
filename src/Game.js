@@ -1,21 +1,18 @@
 import React, { useState } from 'react';
 import Square from './Square';
-import './App.css'
-
+import './App.css';
 function Game() {
   const [squares, setSquares] = useState(Array(9).fill(null));
   const [xIsNext, setXIsNext] = useState(true);
-
   const handleClick = (index) => {
     const newSquares = squares.slice();
     if (calculateWinner(newSquares) || newSquares[index]) {
       return;
     }
-    newSquares[index] = xIsNext ? 'X' : 'O';
+    newSquares[index] = xIsNext ? '🙂' : '😎';
     setSquares(newSquares);
     setXIsNext(!xIsNext);
   };
-
   const renderSquare = (index) => {
     const isWinnerSquare = winner && winner.line.includes(index);
     return (
@@ -26,13 +23,10 @@ function Game() {
       />
     );
   };
-  
-
   const winner = calculateWinner(squares);
   const status = winner
-    ? `Winner: ${winner}`
-    : `Next player: ${xIsNext ? 'X' : 'O'}`;
-
+    ? `Winner: ${winner.winner}`
+    : `Next player: ${xIsNext ? '🙂' : '😎'}`;
   return (
     <div>
       <div className="status">{status}</div>
@@ -54,11 +48,6 @@ function Game() {
     </div>
   );
 }
-
-
-// Helper function to determine the winner
-
-  // ... (implementation of winner calculation logic)
   function calculateWinner(squares) {
     const lines = [
       [0, 1, 2],
@@ -78,7 +67,4 @@ function Game() {
     }
     return null;
   }
-  
-
-
-export default Game;
+  export default Game;
